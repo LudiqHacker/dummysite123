@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Success</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file name */
+      background-size: cover;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    div {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .perfume-images {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .perfume-images img {
+      width: 150px; /* Adjust the size as needed */
+      height: auto;
+    }
+
+    .perfume-images img.left {
+      margin-right: 20px;
+    }
+
+    .perfume-images img.right {
+      margin-left: 20px;
+    }
+
+    .youtube-link {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Welcome <span id="username"></span> to Dummy Website123</h1>
+    <p>This is a dummy website for educational purposes.</p>
+
+    <div class="perfume-images">
+      <img src="la_male_left.jpg" alt="La Male Perfume Bottle - Left" class="left">
+      <img src="la_male_right.jpg" alt="La Male Perfume Bottle - Right" class="right">
+    </div>
+  </div>
+
+  <div class="youtube-link">
+    <a href="https://www.youtube.com/@gogoop5960" target="_blank">
+      <img src="youtube_logo_square.png" alt="YouTube Logo" width="80">
+    </a>
+  </div>
+
+  <script>
+    // Retrieve the username from the URL query parameter
+    var urlParams = new URLSearchParams(window.location.search);
+    var username = urlParams.get('username');
+
+    // Update the content with the username
+    document.getElementById('username').innerText = username;
+  </script>
+</body>
+</html>
